@@ -2,7 +2,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
+  <Layout title="Home">
     <div className="w-full h-full flex items-center justify-center absolute">
       <div className="max-w-lg bg-white p-36 rounded-3xl shadow-2xl">
         <img

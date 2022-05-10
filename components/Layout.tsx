@@ -10,7 +10,7 @@ type Props = {
 const Layout = ({ children, title = "This is the default title" }: Props) => (
   <div className="min-h-screen flex flex-col bg-cyan-500 bg-opacity-100">
     <Head>
-      <title>{title}</title>
+      <title>{title + " | Zingy Music"}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
