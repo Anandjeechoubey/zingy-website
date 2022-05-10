@@ -3,7 +3,18 @@ import Layout from "../components/Layout";
 
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
-    <h1 className="text-center">Hello Zingy 👋</h1>
+    <div className="w-full h-full flex items-center justify-center absolute">
+      <div className="max-w-lg bg-white p-36 rounded-3xl shadow-2xl">
+        <img
+          src="https://zingy-public-media.s3.ap-south-1.amazonaws.com/Zingy.png"
+          alt="Zingy Music"
+          className="mx-auto"
+        />
+        <h1 className="text-center text-2xl mt-4 text-zinc-600">
+          🚧 Coming Soon...
+        </h1>
+      </div>
+    </div>
   </Layout>
 );
 
