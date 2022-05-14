@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.gradbg {
+    background-image: url('../images/bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes emerge-one {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+}
+@keyframes emerge-two {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+    }
+    67% {
+        opacity: 1;
+    }
+}
+@keyframes emerge-three {
+    0% {
+        opacity: 0;
+    }
+    67% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.animate-one {
+    animation: emerge-one 3s normal infinite;
+}
+.animate-two {
+    animation: emerge-two 3s normal infinite;
+}
+.animate-three {
+    animation: emerge-three 3s normal infinite;
+}
+
+.primary-text {
+    color: #522FA4;
+}
