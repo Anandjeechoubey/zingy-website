@@ -59,7 +59,7 @@ const Contact = () => {
   };
   return (
     <Box
-      id="about"
+      id="contact"
       className="p-8 md:p-20 min-h-screen flex flex-col gap-16 items-center justify-center"
     >
       <h2 className="font-bold uppercase text-center">
