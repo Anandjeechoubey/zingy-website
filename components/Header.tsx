@@ -30,7 +30,7 @@ const Header = () => {
           <div>
             <Image width={120} height={45} src="/logo.png" alt="logo" />
           </div>
-          <div className="flex gap-4 md:gap-12 text-xl font-semibold">
+          <div className="hidden md:flex gap-4 md:gap-12 text-xl font-semibold">
             <Link href="#about">About</Link>
             <Link href="#features">Features</Link>
             <Link href="#team">Team</Link>

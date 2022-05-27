@@ -38,10 +38,10 @@ const Footer = () => (
         <Image width={45} height={30} src="/discord.svg" alt="logo" />
       </a>
     </Box>
-    <Typography variant="h6" component="h6" className="font-medium uppercase">
+    <h6 className="font-medium uppercase text-xl text-center">
       Made with <span className="text-red-600">❤</span> from IIT Roorkee
       students
-    </Typography>
+    </h6>
   </Box>
 );
 

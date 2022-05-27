@@ -22,13 +22,9 @@ const Feature = ({ name, text, image, img2, odd = false }) => (
         src={image}
         alt={name}
       />
-      <Image
-        className="absolute"
-        width={280}
-        height={530}
-        src={img2}
-        alt={name}
-      />
+      <Box className="hidden md:block">
+        <Image width={280} height={530} src={img2} alt={name} />
+      </Box>
     </Box>
   </Box>
 );
