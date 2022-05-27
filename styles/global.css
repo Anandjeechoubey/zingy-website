@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h1 {
+      @apply text-8xl;
+    }
+    h2 {
+      @apply text-6xl;
+      @apply font-bold;
+    }
+  }
 
 .gradbg {
     background-image: url('../images/bg.png');
@@ -88,4 +97,39 @@
     background-color: #522FA4;
     color: #fff;
     border: none;
+}
+
+@media (min-width: 768px) {
+    .md-px-20 {
+        padding-left: 5rem/* 80px */;
+        padding-right: 5rem/* 80px */;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .md-flex-row {
+        flex-direction: row;
+    }
+}
+.justify-between {
+    justify-content: space-between;
+}
+.items-center{
+    align-items: center;
+}
+.py-6 {
+    padding-top: 1.5rem/* 24px */;
+    padding-bottom: 1.5rem/* 24px */;
+}
+.px-8 {
+    padding-left: 2rem/* 32px */;
+    padding-right: 2rem/* 32px */;
 }

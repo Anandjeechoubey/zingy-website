@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  TextField,
-  Typography,
-  Snackbar,
-  Alert,
-} from "@mui/material";
+import { Box, TextField, Typography, Snackbar, Alert } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import Image from "next/image";
 import React from "react";
@@ -14,12 +7,20 @@ import axios from "axios";
 const HomeHero = () => {
   const [email, setEmail] = React.useState("");
   const [warning, setWarning] = React.useState(false);
+  const [wrongEmail, setWrongEmail] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const [success, setSuccess] = React.useState(false);
   const [error, setError] = React.useState(false);
 
+  const isEmailValid = (check: string) => {
+    return check.match("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isEmailValid(email)) {
+      setWrongEmail(true);
+      return;
+    }
     setWarning(false);
     setLoading(true);
     try {
@@ -42,15 +43,13 @@ const HomeHero = () => {
       setEmail("");
     }
   };
+
   return (
     <Box className="p-8 md:p-20 min-h-screen gap-12 flex flex-col-reverse md:flex-row items-center justify-center">
       <Box className="max-w-lg">
-        <Typography
-          variant="h2"
-          className="font-semibold text-4xl md:text-6xl mb-8"
-        >
+        <h2 className="font-semibold text-4xl md:text-6xl mb-8">
           India's first social music-creators platform
-        </Typography>
+        </h2>
         <Typography variant="body1">
           Zingy aspires to be India's first musicians based community platform
           helping them to connect-create-collaborate.
@@ -68,10 +67,7 @@ const HomeHero = () => {
           placeholder="Enter your email"
           className="input-field w-2/4"
         />
-        <LoadingButton
-          variant="outlined"
-          loading={loading}
-          // disabled={!email.length}
+        <button
           className="submit-button"
           onClick={(e) => {
             if (email.length) {
@@ -82,7 +78,7 @@ const HomeHero = () => {
           }}
         >
           Apply for early access
-        </LoadingButton>
+        </button>
       </Box>
       <Box className="mt-20 md:mt-0">
         <Image width={348} height={433} src="/hero.png" alt="hero" />
@@ -111,6 +107,19 @@ const HomeHero = () => {
           sx={{ width: "100%" }}
         >
           Already Registered!
+        </Alert>
+      </Snackbar>
+      <Snackbar
+        open={wrongEmail}
+        onClose={() => setWrongEmail(false)}
+        autoHideDuration={4000}
+      >
+        <Alert
+          onClose={() => setWrongEmail(false)}
+          severity="error"
+          sx={{ width: "100%" }}
+        >
+          Invalid EmailId!
         </Alert>
       </Snackbar>
       <Snackbar

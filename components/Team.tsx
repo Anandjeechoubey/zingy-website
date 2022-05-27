@@ -3,32 +3,27 @@ import Image from "next/image";
 import React from "react";
 
 const TeamMember = ({ name, image, designation }) => (
-  <Grid
-    className="flex flex-col items-center pt-0 pdng-0"
-    item
-    xs={12}
-    sm={4}
-    md={3}
-    paddingLeft="0px"
-  >
-    <Box>
-      <Image
-        className="mx-auto"
-        width={180}
-        height={180}
-        src={image}
-        alt={name}
-      />
-      <Typography className="text-center" variant="h6">
-        {name}
-      </Typography>
-      <Typography
-        sx={{ color: "#7B36FA" }}
-        className="text-center"
-        variant="body1"
-      >
-        {designation}
-      </Typography>
+  <Grid className="pdng-0" item xs={12} sm={4} md={3} paddingLeft="0px">
+    <Box className="flex flex-col items-center pt-0 ">
+      <Box>
+        <Image
+          className="mx-auto"
+          width={180}
+          height={180}
+          src={image}
+          alt={name}
+        />
+        <Typography className="text-center" variant="h6">
+          {name}
+        </Typography>
+        <Typography
+          sx={{ color: "#7B36FA" }}
+          className="text-center"
+          variant="body1"
+        >
+          {designation}
+        </Typography>
+      </Box>
     </Box>
   </Grid>
 );
@@ -37,14 +32,13 @@ const Team = () => (
     id="team"
     className="p-8 md:p-20 min-h-screen w-full flex gap-24 flex-col items-center justify-center"
   >
-    <Typography
-      variant="h2"
-      sx={{ color: "#7B36FA" }}
-      component="h2"
-      className="font-bold uppercase text-center"
+    {/* <Typography variant="h2" component="h2"></Typography> */}
+    <h2
+      style={{ color: "#7B36FA" }}
+      className="h2 font-bold uppercase text-center"
     >
       Meet the Team
-    </Typography>
+    </h2>
     <Grid container justifyContent="center" spacing={2} rowGap={12}>
       <TeamMember
         name="Kaushal Chanani"

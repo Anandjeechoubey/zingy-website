@@ -6,13 +6,13 @@ const AboutUs = () => (
     id="about"
     className="p-8 md:p-20 min-h-screen flex flex-col gap-16 items-center justify-center"
   >
-    <Typography
-      variant="h2"
-      sx={{ color: "#7B36FA" }}
-      className="font-bold uppercase text-center"
+    {/* <Typography variant="h2"></Typography> */}
+    <h2
+      style={{ color: "#7B36FA" }}
+      className="h2 text-6xl font-bold uppercase text-center"
     >
       About US
-    </Typography>
+    </h2>
     <Typography className="max-w-4xl text-center" variant="body1">
       We are a bunch of hard-core music enthusiasts from IIT Roorkee. The Indian
       music Industry has never been fair for the artist and talents. There has

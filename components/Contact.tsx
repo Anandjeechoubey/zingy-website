@@ -62,15 +62,10 @@ const Contact = () => {
       id="about"
       className="p-8 md:p-20 min-h-screen flex flex-col gap-16 items-center justify-center"
     >
-      <Typography
-        variant="h2"
-        // sx={{ color: "#7B36FA" }}
-        component="h2"
-        className="font-bold uppercase text-center"
-      >
+      <h2 className="font-bold uppercase text-center">
         Get in <span style={{ color: "#7B36FA" }}>touch</span>
-      </Typography>
-      <Box className="max-w-lg">
+      </h2>
+      <Box className="w-full max-w-lg">
         <TextField
           variant="outlined"
           fullWidth
@@ -80,15 +75,16 @@ const Contact = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
         />
-        <TextField
-          variant="outlined"
-          label="Subject"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-          fullWidth
-          className="my-6"
-          placeholder="Subject"
-        />
+        <Box className="my-6">
+          <TextField
+            variant="outlined"
+            label="Subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+            fullWidth
+            placeholder="Subject"
+          />
+        </Box>
         <TextField
           variant="outlined"
           multiline
@@ -100,7 +96,7 @@ const Contact = () => {
           required
           placeholder="Message"
         />
-        <Button
+        <button
           onClick={(e) => {
             if (email === "" || message === "") {
               setWarning(true);
@@ -108,12 +104,10 @@ const Contact = () => {
               handleSubmit(e);
             }
           }}
-          fullWidth
-          className="submit-button"
-          variant="outlined"
+          className="submit-button w-full"
         >
           Submit
-        </Button>
+        </button>
       </Box>
       <Snackbar
         open={success}

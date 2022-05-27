@@ -34,12 +34,13 @@ const Footer = () => (
       <a href="https://www.instagram.com/zingy.official/">
         <Image width={45} height={30} src="/instagram.svg" alt="logo" />
       </a>
-      <a href="https://www.youtube.com/channel/UCOQ61YQWtXRgaoBrj8R-AOg">
+      <a href="https://discord.gg/tFYFybKPSK">
         <Image width={45} height={30} src="/discord.svg" alt="logo" />
       </a>
     </Box>
     <Typography variant="h6" component="h6" className="font-medium uppercase">
       Made with <span className="text-red-600">❤</span> from IIT Roorkee
+      students
     </Typography>
   </Box>
 );

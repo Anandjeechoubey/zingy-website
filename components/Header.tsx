@@ -25,16 +25,18 @@ function ElevationScroll(props: any) {
 const Header = () => {
   return (
     <ElevationScroll>
-      <AppBar className="bg-white text-black px-8 md:px-20 py-6 flex flex-col md:flex-row justify-between items-center">
-        <div>
-          <Image width={120} height={45} src="/logo.png" alt="logo" />
-        </div>
-        <div className="flex gap-4 md:gap-12 text-xl font-semibold">
-          <Link href="#about">About</Link>
-          <Link href="#features">Features</Link>
-          <Link href="#team">Team</Link>
-          <Link href="#contact">Contact</Link>
-        </div>
+      <AppBar sx={{ background: "white", color: "black" }}>
+        <Box className="px-8 md:px-20 py-6 flex md:flex-row flex-col  justify-between items-center">
+          <div>
+            <Image width={120} height={45} src="/logo.png" alt="logo" />
+          </div>
+          <div className="flex gap-4 md:gap-12 text-xl font-semibold">
+            <Link href="#about">About</Link>
+            <Link href="#features">Features</Link>
+            <Link href="#team">Team</Link>
+            <Link href="#contact">Contact</Link>
+          </div>
+        </Box>
       </AppBar>
     </ElevationScroll>
   );

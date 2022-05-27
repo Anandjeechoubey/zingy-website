@@ -9,13 +9,9 @@ const Feature = ({ name, text, image, img2, odd = false }) => (
     }`}
   >
     <Box className="max-w-lg">
-      <Typography
-        className="font-bold mb-4"
-        sx={{ color: "#7B36FA" }}
-        variant="h2"
-      >
+      <h2 className="font-bold mb-4" style={{ color: "#7B36FA" }}>
         {name}
-      </Typography>
+      </h2>
       <Typography variant="body1">{text}</Typography>
     </Box>
     <Box className="relative">
