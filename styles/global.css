@@ -52,3 +52,40 @@
 .primary-text {
     color: #522FA4;
 }
+
+.pdng-0 {
+    padding: 0 !important;
+}
+
+.submit-button {
+    background-color: #7B36FA;
+    margin-top: 20px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+
+.input-field{
+    padding: 20px 20px 10px 0px !important;
+    font-size: small;
+}
+
+.input-field:focus {
+    border-color: #522FA4 !important;
+}
+
+.submit-button:hover {
+    background-color: #522FA4;
+    color: #fff;
+    border: none;
+}
+
+.submit-button:disabled {
+    background-color: #522FA4;
+    color: #fff;
+    border: none;
+}

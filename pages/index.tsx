@@ -1,48 +1,42 @@
-import Link from "next/link";
+import { Box } from "@mui/material";
+import AboutUs from "../components/About";
+import Contact from "../components/Contact";
+import Feature from "../components/Feature";
+import HomeHero from "../components/Hero";
 import Layout from "../components/Layout";
+import Team from "../components/Team";
 
 const IndexPage = () => (
   <Layout title="Home">
-    <div className="w-full h-full flex flex-col absolute">
-      <div className="p-8">
-        <img
-          src="https://zingy-public-media.s3.ap-south-1.amazonaws.com/Zingy.png"
-          alt="Zingy Music"
-          style={{ height: "50%" }}
-        />
-      </div>
-      <div className="flex grow-1 flex-col items-center justify-center w-full h-full mb-16">
-        <div className="flex">
-          <div className="flex items-center rotate-180 animate-three">
-            <img src="https://zingy-public-media.s3.ap-south-1.amazonaws.com/3.png" />
-          </div>
-          <div className="flex items-center rotate-180 animate-two">
-            <img src="https://zingy-public-media.s3.ap-south-1.amazonaws.com/2.png" />
-          </div>
-          <div className="flex items-center rotate-180 animate-one">
-            <img src="https://zingy-public-media.s3.ap-south-1.amazonaws.com/1.png" />
-          </div>
-          <div className="flex items-center">
-            <img src="https://zingy-public-media.s3.ap-south-1.amazonaws.com/hero.png" />
-          </div>
-          <div className="flex items-center animate-one">
-            <img src="https://zingy-public-media.s3.ap-south-1.amazonaws.com/1.png" />
-          </div>
-          <div className="flex items-center animate-two">
-            <img src="https://zingy-public-media.s3.ap-south-1.amazonaws.com/2.png" />
-          </div>
-          <div className="flex items-center animate-three">
-            <img src="https://zingy-public-media.s3.ap-south-1.amazonaws.com/3.png" />
-          </div>
-        </div>
-        <h1 className="text-center text-2xl mt-1 primary-text">
-          streaming starts soon <span className="animate-one">.</span>
-          <span className="animate-two">.</span>
-          <span className="animate-three">.</span>
-        </h1>
-      </div>
-    </div>
+    <HomeHero />
+    <Box id="features">
+      <Feature
+        name="Create"
+        image="/create-1.png"
+        img2="/create-2.png"
+        text="Create and Share music content, create robust portfolios opening up an ocean of opportunities for you."
+      />
+      <Feature
+        name="Connect"
+        image="/connect-1.png"
+        img2="/connect-2.png"
+        odd
+        text="Discover best musicians based on their skills, genres, artforms via portfolios and connect seamlessly. We let you build a robust network in the music industry to grow big!"
+      />
+      <Feature
+        name="Collaborate"
+        image="/collab-1.png"
+        img2="/collab-2.png"
+        text="Find likeminded people to work together on your unfinished music ideas, hire or get hired from the community, make your own band!"
+      />
+    </Box>
+    <AboutUs />
+    <Team />
+    <Contact />
   </Layout>
 );
 
 export default IndexPage;
+//Create and Share
+//skills, genres, artforms via portfolios and connect
+//  hire or get hired from the community

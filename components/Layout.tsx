@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
 
 type Props = {
   children?: ReactNode;
@@ -8,7 +10,7 @@ type Props = {
 };
 
 const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <div className="min-h-screen flex flex-col gradbg">
+  <div className="min-h-screen flex flex-col">
     <Head>
       <title>{title + " | Zingy Music"}</title>
       <meta charSet="utf-8" />
@@ -30,6 +32,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
         | <a href="/api/users">Users API</a>
       </nav>
     </header> */}
+    <Header />
     <main className="flex-grow relative">{children}</main>
     {/* <footer className="px-16 text-slate-100">
       <hr />
@@ -37,6 +40,8 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
         <h6 className="text-center">Zingy Music</h6>
       </div>
     </footer> */}
+
+    <Footer />
   </div>
 );
 
