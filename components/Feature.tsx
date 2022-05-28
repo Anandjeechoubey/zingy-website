@@ -14,15 +14,15 @@ const Feature = ({ name, text, image, img2, odd = false }) => (
       </h2>
       <Typography variant="body1">{text}</Typography>
     </Box>
-    <Box className="relative">
+    <Box className="relative top-0 left-0">
       <Image
-        className="relative"
+        className="relative top-0 left-0"
         width={280}
         height={530}
         src={image}
         alt={name}
       />
-      <Box className="hidden md:block">
+      <Box className="inline absolute top-0 left-0 animate-one">
         <Image width={280} height={530} src={img2} alt={name} />
       </Box>
     </Box>
