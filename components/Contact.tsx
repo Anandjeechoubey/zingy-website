@@ -35,7 +35,7 @@ const Contact = () => {
     }
     try {
       await axios.post(
-        "http://api.zingymusic.com/v1/misc/form-query",
+        "https://api.zingymusic.com/v1/misc/form-query",
         { email, subject, text: message },
         {
           headers: {

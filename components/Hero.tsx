@@ -25,7 +25,7 @@ const HomeHero = () => {
     setLoading(true);
     try {
       await axios.post(
-        "http://api.zingymusic.com/v1/misc/early-access-request",
+        "https://api.zingymusic.com/v1/misc/early-access-request",
         { email },
         {
           headers: {
