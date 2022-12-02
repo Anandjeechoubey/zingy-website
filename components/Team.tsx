@@ -57,7 +57,7 @@ const Team = () => (
       />
       <TeamMember
         name="Manish Kumar"
-        designation="Digital Media Lead"
+        designation="Product"
         image="/manish.jpg"
       />
       <TeamMember
